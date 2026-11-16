@@ -241,13 +241,17 @@ section {
 
 
 /* Phone layout */
-
 @media (max-width: 768px) {
     section {
         padding: 20px;
     }
 
-    /* Stack navigation links */
+    /* Navigation */
+    .nav-bar,
+    nav ul {
+        margin: 0;
+    }
+
     nav ul {
         flex-direction: column;
         padding: 0;
@@ -258,62 +262,54 @@ section {
         font-size: 15px;
     }
 
-      .nav-bar,
-    nav ul {
-        margin: 0;
-    }
-
-    
-    /* Stack intro text and icon */
-
     h2 {
         font-size: 24px;
         text-align: center;
-        font-weight: bold;
     }
 
-    .a {
-        font-size: 13px;
-        text-align: center;
-    }
-
+    /* Intro */
     .intro-content {
         display: flex;
         flex-direction: column;
-        margin-top: 0;
+        align-items: center;
+        margin: 20px 0 0;
         text-align: center;
-        gap: 0;
+        gap: 10px;
     }
 
     .intro-content .main-icon {
+        order: -1;
         width: 75%;
         max-width: 280px;
         height: auto;
-        margin: 0;
+        margin: 0 auto;
+        transform: none;
     }
 
     .intro-text {
         width: 100%;
         max-width: 400px;
+        transform: none;
     }
 
     .intro-text h1 {
         font-size: 28px;
         text-align: center;
+        margin: 0 0 15px;
     }
 
     .intro-text h4 {
         font-size: 13px;
+        margin: 0 0 15px;
     }
 
     .intro-text p {
         font-size: 13px;
         line-height: 1.6;
+        margin: 0;
     }
 
-}
-
-    /* One assignment per row */
+    /* Assignment grids */
     .practice-grid,
     .partner-grid,
     .individual-grid {
@@ -323,7 +319,6 @@ section {
         gap: 30px;
     }
 
-    /* Remove staggered positioning */
     .practice-grid li:nth-child(2),
     .partner-grid li:nth-child(2) {
         transform: none;
@@ -345,20 +340,27 @@ section {
         font-size: 16px;
     }
 
-    .intro{
-    background-image: url("Images/phone-1.png");
-    background-size: cover;
-    background-position: center;
-}
+    /* Phone backgrounds */
+    .intro {
+        background-image: url("Images/phone-1.png");
+    }
 
     .practice {
-    background-image: linear-gradient(to bottom, transparent 60%, #f8c84f 100%), url("Images/phone-1.png");
-    background-size: cover;
-    background-position: center;
-}
+        background-image:
+            linear-gradient(to bottom, transparent 60%, #f8c84f),
+            url("Images/phone-1.png");
+    }
 
     .individual {
-    background-image: linear-gradient(to top, transparent 60%, #f8c84f 100%), url("Images/phone-2.png");
-    background-size: cover;
-    background-position: center;
+        background-image:
+            linear-gradient(to top, transparent 60%, #f8c84f),
+            url("Images/phone-2.png");
+    }
+
+    .intro,
+    .practice,
+    .individual {
+        background-size: cover;
+        background-position: center;
+    }
 }
