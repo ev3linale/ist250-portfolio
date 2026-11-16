@@ -1,0 +1,364 @@
+@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro:wght@700&family=Source+Sans+3:wght@400&display=swap');
+
+body {
+    font-family: "Source Sans 3", sans-serif;
+    margin: 0;
+}
+
+h1,
+h2,
+h4 {
+    font-family: "Anonymous Pro", monospace;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+h4 {
+    font-size: 20px;
+}
+
+p {
+    font-size: 20px;
+    padding: 0;
+}
+
+/* NAV BAR */
+
+.nav-bar {
+    margin: 40px
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    list-style-type: none;
+}
+
+nav a {
+    text-decoration: none;
+    font-family: "Anonymous Pro", monospace;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: black;
+    &:hover {
+        text-decoration: underline;
+        color: skyblue;
+    }
+
+}
+
+/* Settings shared by every section */
+section {
+    min-height: 100vh;
+    margin: 0;
+    padding: 40px;
+    box-sizing: border-box;
+    background-size: 100% auto;
+    background-position: left top;
+    background-repeat: repeat;
+}
+
+/* A different image for each section */
+.intro {
+    background-image: url("Images/background-1.png");
+}
+
+.practice {
+    background-image: linear-gradient(to bottom, transparent 60%, #f8c84f 100%),
+        url("Images/background-1.png");
+}
+
+.partner-labs {
+    background-color:#f8c84f;
+    
+}
+
+.individual {
+    background-image: linear-gradient(to top, transparent 60%, #f8c84f 100%),
+        url("Images/background-2.png");
+}
+
+/* Intro Page */
+.intro-content {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    align-items: center;
+    gap: 30px;
+    margin: 40px;
+}
+
+.intro-text {
+    max-width: 60%;
+    transform: translate(0px, 90px);
+}
+.intro-text p {
+    line-height: 1.6;
+}
+
+.intro-content .main-icon {
+    width: 100%;
+    height: auto;
+    transform: translate(0px, 60px);
+}
+
+/* Practice Activities */
+.practice-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    list-style: none;
+    gap: 30px;
+    margin: 40px;
+}
+
+.practice-grid img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-top: 50px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+
+    filter: saturate(0%);
+    transition: transform 0.3s ease;
+}
+
+.practice-grid li:nth-child(2) {
+    transform: translate(0px, 300px);
+}
+
+.practice-grid a {
+    display: block;
+    margin-top: 20px;
+    font-size: 20px;;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+      &:hover {
+        text-decoration: underline;
+        color: lightskyblue;
+      }
+}
+
+.practice-grid img:hover {
+    transform: scale(1.2);
+    filter: saturate(100%);
+}
+
+/* Partner Labs */
+
+.partner-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    list-style: none;
+    gap: 30px;
+    margin: 40px;
+}
+
+.partner-grid img {
+    display: block;
+    margin: 0 auto;
+    max-width: 90%;
+    height: auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+
+    filter: saturate(0%);
+    transition: transform 0.3s ease;
+}
+
+.partner-grid li:nth-child(2) {
+    transform: translate(0px, 200px);
+}
+
+.partner-grid a {
+    display: block;
+    margin-top: 20px;
+    font-size: 20px;;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+      &:hover {
+        text-decoration: underline;
+        color: lightskyblue;
+      }
+}
+
+.partner-grid img:hover {
+    transform: scale(1.1);
+    filter: saturate(100%);
+}
+
+/* Individual Assignments */
+
+.individual-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    list-style: none;
+    gap: 30px;
+    margin: 40px;
+}
+
+.individual-grid img {
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+    max-width: 60%;
+    height: auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+
+    filter: saturate(0%);
+    transition: transform 0.3s ease;
+}
+
+.individual-grid a {
+    display: block;
+    margin-top: 20px;
+    font-size: 20px;;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+      &:hover {
+        text-decoration: underline;
+        color: lightskyblue;
+      }
+}
+
+.individual-grid li {
+     text-align: center;
+}
+
+.individual-grid img:hover {
+    transform: scale(1.2);
+    filter: saturate(100%);
+
+}
+
+
+/* Phone layout */
+
+@media (max-width: 768px) {
+    section {
+        padding: 20px;
+    }
+
+    /* Stack navigation links */
+    nav ul {
+        flex-direction: column;
+        padding: 0;
+        gap: 10px;
+    }
+
+    nav a {
+        font-size: 15px;
+    }
+
+      .nav-bar,
+    nav ul {
+        margin: 0;
+    }
+
+    
+    /* Stack intro text and icon */
+
+    h2 {
+        font-size: 24px;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .a {
+        font-size: 13px;
+        text-align: center;
+    }
+
+    .intro-content {
+        display: flex;
+        flex-direction: column;
+        margin-top: 0;
+        text-align: center;
+        gap: 0;
+    }
+
+    .intro-content .main-icon {
+        width: 75%;
+        max-width: 280px;
+        height: auto;
+        margin: 0;
+    }
+
+    .intro-text {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .intro-text h1 {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .intro-text h4 {
+        font-size: 13px;
+    }
+
+    .intro-text p {
+        font-size: 13px;
+        line-height: 1.6;
+    }
+
+}
+
+    /* One assignment per row */
+    .practice-grid,
+    .partner-grid,
+    .individual-grid {
+        grid-template-columns: 1fr;
+        margin: 30px 0;
+        padding: 0;
+        gap: 30px;
+    }
+
+    /* Remove staggered positioning */
+    .practice-grid li:nth-child(2),
+    .partner-grid li:nth-child(2) {
+        transform: none;
+    }
+
+    .practice-grid img,
+    .partner-grid img,
+    .individual-grid img {
+        width: 80%;
+        max-width: 100%;
+        height: auto;
+        margin: 0 auto;
+        transition: transform 0.3s ease, filter 0.6s ease;
+    }
+
+    .practice-grid a,
+    .partner-grid a,
+    .individual-grid a {
+        font-size: 16px;
+    }
+
+    .intro{
+    background-image: url("Images/phone-1.png");
+    background-size: cover;
+    background-position: center;
+}
+
+    .practice {
+    background-image: linear-gradient(to bottom, transparent 60%, #f8c84f 100%), url("Images/phone-1.png");
+    background-size: cover;
+    background-position: center;
+}
+
+    .individual {
+    background-image: linear-gradient(to top, transparent 60%, #f8c84f 100%), url("Images/phone-2.png");
+    background-size: cover;
+    background-position: center;
+}

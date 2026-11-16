@@ -1,0 +1,19 @@
+body {
+    background-color: #FCFBF4;
+    margin: 0;
+    padding: 20px
+}
+
+h1, h2 {
+    color: darkred;
+}
+
+img {
+    border-style: double;
+    border-radius: 20px;
+    border-color: darkred;
+}
+
+#sale-date {
+    font-weight: bold;
+}

@@ -1,0 +1,148 @@
+/* ---------- GENERAL ---------- */
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=DM+Sans:wght@400;500;700;900&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'DM Sans', sans-serif;
+  background-color: white;
+  color: black;
+}
+
+h4 {
+    color: white;
+    text-decoration: underline;
+}
+
+
+/* ---------- NAV ---------- */
+h1 {
+    font-family: 'Allura', cursive;
+    font-size: 48px;
+    margin: 20px;
+    padding: 0;
+    text-align: center;
+    color: white;
+}
+
+nav {
+    background-color: #080808;
+    padding: 10px;
+    text-align: center;
+}
+
+
+/* ---------- HOME HEADER ---------- */
+.header {
+    text-align: center;
+    padding: 40px;
+    border-bottom: 1px solid black;
+}
+
+/* ---------- FEATURED DISHES ---------- */
+.featured-dishes-header {
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+
+}
+
+.featured-dishes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    margin: 20px 50px;
+}
+
+.dish img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* ---------- VISIT US ---------- */
+.directions {
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+    display: none; /* Hide the directions section by default */
+}
+
+.directions img {
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    padding: 15px;
+    margin-top: 60px;
+    text-align: center;
+    background-color: #080808;
+}
+
+.footer-logo {
+    font-size: 30px;
+    font-family: 'Allura', cursive;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+footer p {
+    font-size: 14px;
+    margin: 5px;
+    color: white;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* ---------- MEDIA QUERIES ---------- */
+
+@media (max-width: 1000px) {
+    .featured-dishes {
+    grid-template-columns: 1fr;
+}
+    .dish {
+    display: flex;
+    gap: 20px;
+}
+    .dish img {
+    width: 150px;
+    height: auto;   
+    align-self: flex-start;
+}
+
+    .footer-logo,
+    .location {
+    display: none;
+}
+
+}
+
+@media (max-width: 600px) {
+    main, header, .header, footer {
+        display: none;
+    }
+
+    .directions {
+        display: block; /* Show the directions section on small screens */
+    }
+
+    .directions img {
+        width: 250px;
+        height: auto;
+    }
+}

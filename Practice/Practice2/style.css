@@ -1,0 +1,168 @@
+/* Styles for the everything else */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    color: 	#40352F;
+}
+
+h1 {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+p {
+    font-size: 15px;
+    line-height: 1.5;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+ul {
+    font-size: 15px;
+    line-height: 1.5;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    list-style-type: "★ ";
+}
+
+li {
+    font-size: 15px;
+    line-height: 1.5;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    list-style-type: "★ ";
+}
+
+/* Styles for the layout */
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+    grid-template-areas:
+        "header header header"
+        "sidebar content1 content1"
+        "sidebar content2 content3"
+        "footer footer footer";
+}
+
+/* Styles for the header */
+header {
+    grid-area: header;
+    padding: 30px;
+    background-color: #BDE0FE;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+header img {
+    max-width: 80px;
+    height: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    animation-name: hoshiIcon;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes hoshiIcon {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+/* Styles for the sidebar */
+aside {
+    grid-area: sidebar;
+    padding: 50px;
+    background-color: #FFDCC8;
+}
+
+aside img {
+    max-width: 100%;
+    height: auto;
+    padding-top: 30px;
+    filter: drop-shadow(3px 3px 5px gray);
+}
+
+aside img:hover {
+    transform: scale(1.2);
+}
+
+/* Styles for content1 */
+.content1 {
+    grid-area: content1;
+    padding: 50px;
+    background-color: #EAF5FF;
+}
+
+/* Styles for content2 */
+.content2 {
+    grid-area: content2;
+    padding: 50px;
+    background-color: #EAF5FF;
+}
+
+.content2 img {
+    max-width: 100px;
+    height: auto;
+    padding-top: 30px;
+    filter: drop-shadow(3px 3px 5px gray);
+}
+
+.toys img:hover {
+    transform: scale(1.2);
+}
+
+.toys {
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Styles for content3 */
+.content3 {
+    grid-area: content3;
+    padding: 50px;
+    background-color: #EAF5FF;
+}
+
+.content3 img {
+    max-width: 50%;
+    height: auto;
+    padding-top: 30px;
+    filter: drop-shadow(3px 3px 5px gray);
+}
+
+.adventures {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.adventures img:hover {
+    transform: scale(1.2);
+}
+
+/* Styles for the footer */
+footer {
+    grid-area: footer;
+    padding: 30px;
+    background-color: #BDE0FE;
+    text-align: center;
+}
