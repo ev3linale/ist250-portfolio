@@ -96,9 +96,12 @@ section {
 }
 
 .intro-text {
-    max-width: 60%;
-    transform: translate(0px, 90px);
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    transform: translateY(90px);
 }
+
 .intro-text p {
     line-height: 1.6;
 }
